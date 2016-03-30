@@ -1,0 +1,22 @@
+{
+  "name": "vv2",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "YukiZ <zhangjihong1993@gmail.com>",
+    "vagusX <vagusx@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "flexibility": "~1.0.6"
+  }
+}

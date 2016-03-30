@@ -1,0 +1,140 @@
+.main {
+  min-width: 600px;
+  padding: 20px;
+  background-color: #eee;
+  border: 1px solid #999;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.team-show {
+  float: left;
+  width: 200px;
+  height: 120px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #999;
+
+  .team-avatar {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #eee;
+    background-image: url('../images/team-avatar.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .team-name {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 10px;
+  }
+}
+
+.team-detail {
+  margin-left: 260px;
+  margin-right: 140px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #999;
+  text-indent: 1em;
+  line-height: 1.5;
+}
+
+.member-mask {
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+  background-color: transparent;
+  color: transparent;
+  z-index: 100;
+}
+
+.member-mask:hover {
+  background-color: rgba(255, 51, 153, 0.5);
+  color: #fff;
+  animation: scale 1s;
+}
+
+.member-wrapper + .member-wrapper {
+  margin-top: 20px;
+}
+
+.team-members {
+  float: right;
+  width: 120px;
+  padding: 20px;
+  border: 1px solid #999;
+  background-color: #fff;
+  box-sizing: border-box;
+
+  .member-wrapper {
+    width: 80px;
+    height: 80px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .caicai {
+    background-image: url('../images/caicai.png');
+  }
+
+  .yuki {
+    background-image: url('../images/yuki.png');
+  }
+
+  .dong {
+    background-image: url('../images/dong.png');
+  }
+}
+
+/**
+ * Clearfix based off this: http://nicolasgallagher.com/micro-clearfix-hack/
+ * For modern browsers
+ * Known support: Firefox 3.5+, Safari 4+, Chrome, Opera 9+, IE 6+
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ * pseudo-elements and sets their display to table.
+ * This creates an anonymous table-cell and a new block formatting context
+ * that means the :before pseudo-element prevents top-margin collapse.
+ */
+.clearfix:before,
+.clearfix:after {
+  content: " "; /*解决opera下clearfixed元素上下的空白*/
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
+  *zoom: 1;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: .7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: .5;
+  }
+}
